@@ -1,4 +1,4 @@
-name: shell commands
+name: shell commands  
 on: [push]
 jobs: 
  run-shell-commands:
@@ -16,7 +16,7 @@ jobs:
       print(platform.processor())
      shell: python
  run-windows-commands:
-  need: ["run-shell-commands"]
+  needs: ["run-shell-commands"]
   runs-on: windows-latest
   steps: 
    - name: Directory Powershell
